@@ -47,7 +47,7 @@ public class PaymentController {
         return ResponseEntity.ok("Payment completed");
     }
     @GetMapping("/cancel")
-    public ResponseEntity<?> cancelPayment(@RequestParam String orderId) {
+    public ResponseEntity<?> cancelPayment() {
         return ResponseEntity.ok("Payment canceled");
     }
 }
