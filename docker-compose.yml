@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: payment
+    ports:
+        - "5430:5432"
+    volumes:
+        - ./data:/var/lib/postgresql/data
+    networks:
+        - payment-network
+
+volumes:
+    data:
+networks:
+    payment-network:
+        driver: bridge
